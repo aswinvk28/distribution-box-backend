@@ -1,0 +1,14 @@
+{
+    "name": "root/project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aswin Vijayakumar",
+            "email": "aswinkvj@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "doctrine/dbal": "^2.10"
+    }
+}
