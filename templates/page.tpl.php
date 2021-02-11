@@ -3,7 +3,9 @@
     <head>
         <title>Power Distribution Box</title>
         <script type="text/javascript" src="build/scripts/snapsvg.js"></script>
-        <link href="build/static/css/main.cbbc5835.chunk.css" rel="stylesheet" />
+        <link rel="stylesheet" href="stylesheets/App.css" />
+        <script type="text/javascript" src="scripts/snapsvg.js"></script>
+        <link href="/static/css/main.fd7a8289.chunk.css" rel="stylesheet" />
     </head>
     <body>
         <div class="clearfix" id="header_fixed">
@@ -16,9 +18,7 @@
                 <?php echo $html_content; ?>
             </div>
 
-            <div id="root">
-                
-            </div>
+            <div id="root"></div>
             <div id="distribution-front-side">
             <svg
                 id="distribution_front_side"
@@ -94,7 +94,7 @@
                             "static/js/" +
                             ({}[e] || e) +
                             "." +
-                            { 3: "a847552a" }[e] +
+                            { 3: "d317a2d6" }[e] +
                             ".chunk.js"
                         );
                         })(e));
@@ -187,8 +187,8 @@
                 t();
             })([]);
             </script>
-            <script src="build/static/js/2.b19dcae0.chunk.js"></script>
-            <script src="build/static/js/main.77a87ac2.chunk.js"></script>
+            <script src="/static/js/2.34cc0e3c.chunk.js"></script>
+            <script src="/static/js/main.bb63bed6.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
