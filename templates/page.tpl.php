@@ -2,9 +2,8 @@
 <html>
     <head>
         <title>Power Distribution Box</title>
-        <script type="text/javascript" src="build/scripts/snapsvg.js"></script>
-        <link rel="stylesheet" href="stylesheets/App.css" />
-        <script type="text/javascript" src="scripts/snapsvg.js"></script>
+        <link rel="stylesheet" href="/build/stylesheets/App.css" />
+        <script type="text/javascript" src="/build/scripts/snapsvg.js"></script>
         <link href="/static/css/main.fd7a8289.chunk.css" rel="stylesheet" />
     </head>
     <body>
@@ -187,8 +186,8 @@
                 t();
             })([]);
             </script>
-            <script src="/static/js/2.34cc0e3c.chunk.js"></script>
-            <script src="/static/js/main.bb63bed6.chunk.js"></script>
+            <script src="/static/js/2.7f73c75e.chunk.js"></script>
+            <script src="/static/js/main.d768b4ac.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
