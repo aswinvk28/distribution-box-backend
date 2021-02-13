@@ -4,7 +4,7 @@
         <title>Power Distribution Box</title>
         <link rel="stylesheet" href="/build/stylesheets/App.css" />
         <script type="text/javascript" src="/build/scripts/snapsvg.js"></script>
-        <link href="/static/css/main.fd7a8289.chunk.css" rel="stylesheet" />
+        <link href="/build/static/css/main.fd7a8289.chunk.css" rel="stylesheet" />
     </head>
     <body>
         <div class="clearfix" id="header_fixed">
@@ -186,8 +186,8 @@
                 t();
             })([]);
             </script>
-            <script src="/static/js/2.7f73c75e.chunk.js"></script>
-            <script src="/static/js/main.d768b4ac.chunk.js"></script>
+            <script src="/build/static/js/2.7f73c75e.chunk.js"></script>
+            <script src="/build/static/js/main.d768b4ac.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
