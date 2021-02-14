@@ -63,7 +63,7 @@ body, html {
 
 .templated-distributions-container .cartesian {
   float: left;
-  width: 45%;
+  width: 681px;
   height: 646px;
   background: url('../images/power_box/canvas_wheel.png') 0px 0px transparent no-repeat;
   background-size: 100%;
@@ -95,7 +95,9 @@ body, html {
 }
 
 .distribution_container {
-  /* width: 100%; */
+  width: 484px;
+  margin-left: auto;
+  margin-right: auto;
   height: 100%;
   border: 1px solid #beb3b3;
   margin-top: 1%;
@@ -107,7 +109,7 @@ body, html {
 
 .templated-distributions-container .templated {
   float: right;
-  width: 45%;
+  width: 681px;
   background: url('../images/power_box/canvas_wheel.png') 0px 0px transparent no-repeat;
   background-size: 100%;
 }

@@ -186,8 +186,8 @@
                 t();
             })([]);
             </script>
-            <script src="/build/static/js/2.7f73c75e.chunk.js"></script>
-            <script src="/build/static/js/main.d768b4ac.chunk.js"></script>
+            <script src="/build/static/js/2.6ac23e0e.chunk.js"></script>
+            <script src="/build/static/js/main.a6df0f42.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
