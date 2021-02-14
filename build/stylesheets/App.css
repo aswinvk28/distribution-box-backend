@@ -161,6 +161,11 @@ body, html {
   text-align: left;
 }
 
+h2.header-tagline {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
 @media (max-width: 520px) {
   h2.header-tagline {
     font-size: 24px;
@@ -185,8 +190,8 @@ body, html {
 }
 
 #header_controls {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .header-title {
@@ -203,8 +208,8 @@ body, html {
 }
 
 .header-logo-image-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   text-align: right;
 }
 
@@ -300,11 +305,11 @@ body, html {
 
 #menu_navigation, .menu-navigation {
   display: inline-block;
-  display: inline;
+  margin-top: 0px;
+  margin-bottom: 4px;
 }
 
 #menu_navigation .menu-item {
-  display: inline;
   display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
@@ -312,13 +317,51 @@ body, html {
   cursor: pointer;
 }
 
-#menu_navigation .menu-item:hover {
+#menu_navigation .menu-item:hover, .monitoring-header:hover, .power-header:hover {
   color: #e1e1e1;
 }
 
 .menu-item {
   margin-left: 45px;
   font-size: 18px;
+}
+
+#header-separation {
+  border-top: 2px dashed rgb(167, 0, 0);
+}
+
+.monitoring-header, .power-header {
+  width: 681px;
+  padding-left: 66px;
+  padding-right: 66px;
+  display: block;
+  text-align: center;
+}
+
+.monitoring-header {
+  float: left;
+}
+
+.power-header {
+  float: right;
+}
+
+label[for="monitoring_show"] {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+label[for="monitoring_show"] span {
+  margin-left: 3px;
+}
+
+label[for="power_show"] {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+label[for="power_show"] span {
+  margin-left: 3px;
 }
 
 #boxes_container_draggable[sliding-panel="off"] {
