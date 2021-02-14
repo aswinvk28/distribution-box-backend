@@ -72,26 +72,56 @@ body, html {
 .templated-distributions-container #cartesian[data-size="24U"], .templated-distributions-container #templated[data-size="24U"] {
   background: url('../images/power_box/canvas_wheel.png') 0px 0px transparent no-repeat;
   background-size: 100%;
+  height: 1455px;
 }
 
 .templated-distributions-container #cartesian[data-size="20U"], .templated-distributions-container #templated[data-size="20U"] {
   background: url('../images/power_box/canvas_wheel-20u.png') 0px 0px transparent no-repeat;
   background-size: 100%;
+  height: 1254px;
 }
 
 .templated-distributions-container #cartesian[data-size="16U"], .templated-distributions-container #templated[data-size="16U"] {
   background: url('../images/power_box/canvas_wheel-16u.png') 0px 0px transparent no-repeat;
   background-size: 100%;
+  height: 1060px;
 }
 
 .templated-distributions-container #cartesian[data-size="12U"], .templated-distributions-container #templated[data-size="12U"] {
   background: url('../images/power_box/canvas_wheel-12u.png') 0px 0px transparent no-repeat;
   background-size: 100%;
+  height: 865px;
 }
 
 .templated-distributions-container #cartesian[data-size="8U"], .templated-distributions-container #templated[data-size="8U"] {
   background: url('../images/power_box/canvas_wheel-8u.png') 0px 0px transparent no-repeat;
   background-size: 100%;
+  height: 670px;
+}
+
+.templated-distributions-container #cartesian[data-size="24U"] .distribution_container, 
+.templated-distributions-container #templated[data-size="24U"] .distribution_container {
+  height: 1183px;
+}
+
+.templated-distributions-container #cartesian[data-size="20U"] .distribution_container, 
+.templated-distributions-container #templated[data-size="20U"] .distribution_container {
+  height: 983px;
+}
+
+.templated-distributions-container #cartesian[data-size="16U"] .distribution_container, 
+.templated-distributions-container #templated[data-size="16U"] .distribution_container {
+  height: 783px;
+}
+
+.templated-distributions-container #cartesian[data-size="12U"] .distribution_container, 
+.templated-distributions-container #templated[data-size="12U"] .distribution_container {
+  height: 583px;
+}
+
+.templated-distributions-container #cartesian[data-size="8U"] .distribution_container, 
+.templated-distributions-container #templated[data-size="8U"] .distribution_container {
+  height: 403px;
 }
 
 .distribution_container {
@@ -100,7 +130,6 @@ body, html {
   margin-right: auto;
   height: 100%;
   border: 1px solid #beb3b3;
-  margin-top: 1%;
   border-radius: 3px;
   color: #ababab;
   background-image: url('../images/power_box/canvas_grid-2.png');
