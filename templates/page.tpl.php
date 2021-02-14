@@ -13,9 +13,9 @@
             </div>
         </div>
         <div class="clearfix" id="page_full">
-            <div id="page_body">
-                <?php echo $html_content; ?>
-            </div>
+            <!--<div id="page_body">
+                <?php //echo $html_content; ?>
+            </div>-->
 
             <div id="root"></div>
             <div id="distribution-front-side">
