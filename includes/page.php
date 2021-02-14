@@ -81,7 +81,9 @@ function page_execute_script($page, $context, $route) {
 
 function page_shutdown_site() {
     
-    session_destroy();
+    // session_destroy();
+
+    session_write_close();
     
 }
 
@@ -90,25 +92,5 @@ function page_get_home($context, $route, $page) {
     require_once PAGE_ROOT . "/pages/home/home.php";
     $page['content'] = ob_get_clean();
     $page['section_name'] = "home";
-    return $page;
-}
-
-function page_get_s3_list($context, $route, $page) {
-    require_once PAGE_ROOT . '/actions/list_s3.php';
-    if(!isset($normal_objects)) {
-        throw new Exception("S3 Objects from the bucket 'normal' are not captured");
-    }
-    if(!isset($pneumonia_objects)) {
-        throw new Exception("S3 Objects from the bucket 'pneumonia' are not captured");
-    }
-    $output = [];
-    foreach ($normal_objects['Contents']  as $object) {
-        $output[] = array("image_url" => $object['Key']);
-    }
-    foreach ($pneumonia_objects['Contents']  as $object) {
-        $output[] = array("image_url" => $object['Key']);
-    }
-    $page['section_name'] = "home";
-    $page['content'] = json_encode($output);
     return $page;
 }
