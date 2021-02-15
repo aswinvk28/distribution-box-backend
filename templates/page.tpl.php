@@ -4,7 +4,7 @@
         <title>Power Distribution Box</title>
         <link rel="stylesheet" href="/build/stylesheets/App.css" />
         <script type="text/javascript" src="/build/scripts/snapsvg.js"></script>
-        <link href="/build/static/css/main.fd7a8289.chunk.css" rel="stylesheet" />
+        <link href="/static/css/main.a25a15eb.chunk.css" rel="stylesheet" />
     </head>
     <body>
         <div class="clearfix" id="header_fixed">
@@ -18,7 +18,7 @@
             </div>-->
 
             <div id="root"></div>
-            <div id="distribution-front-side">
+            <div id="distribution-front-side" style="display: none">
             <svg
                 id="distribution_front_side"
                 viewBox="0 0 3200 2400"
@@ -27,7 +27,7 @@
                 version="1.2"
             ></svg>
             </div>
-            <div id="distribution-rear-side">
+            <div id="distribution-rear-side" style="display: none">
             <svg
                 id="distribution_rear_side"
                 viewBox="0 0 3200 2400"
@@ -93,7 +93,7 @@
                             "static/js/" +
                             ({}[e] || e) +
                             "." +
-                            { 3: "d317a2d6" }[e] +
+                            { 3: "cccabdaa" }[e] +
                             ".chunk.js"
                         );
                         })(e));
@@ -186,8 +186,8 @@
                 t();
             })([]);
             </script>
-            <script src="/build/static/js/2.f9c248dc.chunk.js"></script>
-            <script src="/build/static/js/main.1ebdfbad.chunk.js"></script>
+            <script src="/build/static/js/2.38de3ee7.chunk.js"></script>
+            <script src="/build/static/js/main.5edd628d.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
