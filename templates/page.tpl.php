@@ -4,7 +4,7 @@
         <title>Power Distribution Box</title>
         <link rel="stylesheet" href="/build/stylesheets/App.css" />
         <script type="text/javascript" src="/build/scripts/snapsvg.js"></script>
-        <link href="/static/css/main.a25a15eb.chunk.css" rel="stylesheet" />
+        <link href="/build/static/css/main.a25a15eb.chunk.css" rel="stylesheet" />
     </head>
     <body>
         <div class="clearfix" id="header_fixed">
