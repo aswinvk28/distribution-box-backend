@@ -10,5 +10,11 @@
     "minimum-stability": "dev",
     "require": {
         "doctrine/dbal": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "PowerDistribution\\Access\\Command": "actions/command.php", 
+            "PowerDistribution\\Access\\Query": "actions/query.php"
+        }
     }
 }

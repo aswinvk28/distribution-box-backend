@@ -13,15 +13,15 @@ $routes = array(
             'page' => array('content' => array(), 'section_name' => '')
         )
     ),
-    'list-s3' => array(
-        'callable' => 'page_get_s3_list',
+    '/distros/save' => array(
+        'callable' => 'page_post_distros_save',
         'variables' => array(
             'page' => array('content' => array(), 'sidebar' => array(), 'message' => '')
         ),
-        'method' => 'GET',
+        'method' => 'POST',
         'headers' => array(
             'Content-Type: application/json',
-            'Access-Control-Allow-Origin: *'
+            'Access-Control-Allow-Origin: ' . $_SERVER['SERVER_NAME']
         )
     )
 );

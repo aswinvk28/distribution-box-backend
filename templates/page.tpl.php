@@ -195,5 +195,8 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            window.HOSTNAME_URL = "http://powerdistribution.journalai.io";
+        </script>
     </body>
 </html>

@@ -1,5 +1,9 @@
 <?php
 
+use PowerDistribution\Access\Command;
+use PowerDistribution\Access\Query;
+use PowerDistribution\Access\Database;
+
 class Context extends stdClass
 {
     function dispatch($routes)
@@ -52,6 +56,14 @@ function get_page_context() {
     parse_str($context->q, $output);
     $context->variables = $output;
     $context->page_variables = array('html_content' => '');
+    if(isset($_POST)) {
+        $keys = array_keys($_POST);
+        $context->post_array = [];
+        foreach($keys as $key) {
+            $context->post_array[$key] = filter_input(INPUT_POST, $key, FILTER_DEFAULT, null);
+        }
+        $_POST = null;
+    }
     
     return $context;
 }
@@ -93,4 +105,19 @@ function page_get_home($context, $route, $page) {
     $page['content'] = ob_get_clean();
     $page['section_name'] = "home";
     return $page;
+}
+
+function page_post_distros_save($context, $route, $page) {
+    $cmd = new Command(Database::getConnection());
+
+    $cartesian = filter_var($context->post_array["cartesian"], FILTER_FORCE_ARRAY, null);
+    $templated = filter_var($context->post_array["templated"], FILTER_FORCE_ARRAY, null);
+    $cartesian_size = filter_var($context->post_array["cartesian_size"], FILTER_DEFAULT, null);
+    $templated_size = filter_var($context->post_array["templated_size"], FILTER_DEFAULT, null);
+
+    $cmd->saveDrawing("cartesian", $cartesian, "cartesian_items");
+    $cmd->saveDrawing("templated", $templated, "templated_items");
+    
+    $cmd->saveParameters("cartesian", $cartesian_size, "cartesian_size");
+    $cmd->saveParameters("templated", $templated_size, "templated_size");
 }
