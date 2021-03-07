@@ -36,6 +36,17 @@
                 version="1.2"
             ></svg>
             </div>
+            <style>
+            .contextmenu__item {
+                padding: 3px 5px;
+            }
+            .contextmenu {
+                padding: 3px 0;
+            }
+            </style>
+            <script type="text/javascript">
+            window.HOSTNAME_URL = "http://localhost:3000";
+            </script>
             <script>
             !(function (e) {
                 function r(r) {
@@ -93,7 +104,7 @@
                             "static/js/" +
                             ({}[e] || e) +
                             "." +
-                            { 3: "d9ce6972" }[e] +
+                            { 3: "849d1e0a" }[e] +
                             ".chunk.js"
                         );
                         })(e));
@@ -186,8 +197,8 @@
                 t();
             })([]);
             </script>
-            <script src="/build/static/js/2.ea328bd6.chunk.js"></script>
-            <script src="/build/static/js/main.d2c4fbad.chunk.js"></script>
+            <script src="/build/static/js/2.ed7745cc.chunk.js"></script>
+            <script src="/build/static/js/main.4690be20.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
