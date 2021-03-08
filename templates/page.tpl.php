@@ -2,7 +2,12 @@
 <html>
     <head>
         <title>Power Distribution Box</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
         <link rel="stylesheet" href="/build/stylesheets/App.css" />
+        <link rel="stylesheet" media="print" href="/build/stylesheets/Print.css" />
         <script type="text/javascript" src="/build/scripts/snapsvg.js"></script>
         <link href="/build/static/css/main.a25a15eb.chunk.css" rel="stylesheet" />
     </head>
@@ -18,19 +23,33 @@
             </div>-->
 
             <div id="root"></div>
-            <div id="distribution-front-side" style="display: none">
+            <div id="distribution-front-side">
+            <select disabled="disabled" id="unit_size1" name="unit_size1">
+                <option value="24U">24U</option>
+                <option value="20U">20U</option>
+                <option value="16U">16U</option>
+                <option value="12U">12U</option>
+                <option value="8U">8U</option>
+            </select>
             <svg
                 id="distribution_front_side"
-                viewBox="0 0 3200 2400"
+                viewBox="0 0 4200 3150"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 version="1.2"
             ></svg>
             </div>
-            <div id="distribution-rear-side" style="display: none">
+            <div id="distribution-rear-side">
+            <select disabled="disabled" id="unit_size2" name="unit_size2">
+                <option value="24U">24U</option>
+                <option value="20U">20U</option>
+                <option value="16U">16U</option>
+                <option value="12U">12U</option>
+                <option value="8U">8U</option>
+            </select>
             <svg
                 id="distribution_rear_side"
-                viewBox="0 0 3200 2400"
+                viewBox="0 0 4200 3150"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 version="1.2"
@@ -198,7 +217,7 @@
             })([]);
             </script>
             <script src="/build/static/js/2.ed7745cc.chunk.js"></script>
-            <script src="/build/static/js/main.4690be20.chunk.js"></script>
+            <script src="/build/static/js/main.6aa04b42.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
