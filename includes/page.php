@@ -64,7 +64,8 @@ function get_page_context() {
         }
         $_POST = null;
     }
-    
+
+    Database::createInstance();
     return $context;
 }
 
@@ -110,14 +111,23 @@ function page_get_home($context, $route, $page) {
 function page_post_distros_save($context, $route, $page) {
     $cmd = new Command(Database::getConnection());
 
-    $cartesian = filter_var($context->post_array["cartesian"], FILTER_FORCE_ARRAY, null);
-    $templated = filter_var($context->post_array["templated"], FILTER_FORCE_ARRAY, null);
-    $cartesian_size = filter_var($context->post_array["cartesian_size"], FILTER_DEFAULT, null);
-    $templated_size = filter_var($context->post_array["templated_size"], FILTER_DEFAULT, null);
-
-    $cmd->saveDrawing("cartesian", $cartesian, "cartesian_items");
-    $cmd->saveDrawing("templated", $templated, "templated_items");
-    
-    $cmd->saveParameters("cartesian", $cartesian_size, "cartesian_size");
-    $cmd->saveParameters("templated", $templated_size, "templated_size");
+    if(!empty($context->post_array)) {
+        if(isset($context->post_array["cartesian"])) {
+            $cartesian = filter_var($context->post_array["cartesian"], FILTER_DEFAULT, null);
+            $cmd->saveDrawing("cartesian", $cartesian, "cartesian_items");
+        }
+        if(isset($context->post_array["templated"])) {
+            $templated = filter_var($context->post_array["templated"], FILTER_DEFAULT, null);
+            $cmd->saveDrawing("templated", $templated, "templated_items");
+        }
+        if(isset($context->post_array["cartesian_size"])) {
+            $cartesian_size = filter_var($context->post_array["cartesian_size"], FILTER_SANITIZE_STRING, null);
+            $cmd->saveParameters("cartesian", $cartesian_size, "cartesian_size");
+        }
+        if(isset($context->post_array["templated_size"])) {
+            $templated_size = filter_var($context->post_array["templated_size"], FILTER_SANITIZE_STRING, null);            
+            $cmd->saveParameters("templated", $templated_size, "templated_size");
+        }
+    }
+    die();
 }

@@ -123,7 +123,7 @@
                             "static/js/" +
                             ({}[e] || e) +
                             "." +
-                            { 3: "849d1e0a" }[e] +
+                            { 3: "85276985" }[e] +
                             ".chunk.js"
                         );
                         })(e));
@@ -216,8 +216,8 @@
                 t();
             })([]);
             </script>
-            <script src="/build/static/js/2.ed7745cc.chunk.js"></script>
-            <script src="/build/static/js/main.6aa04b42.chunk.js"></script>
+            <script src="/build/static/js/2.ee80ee20.chunk.js"></script>
+            <script src="/build/static/js/main.ac9fdd91.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
@@ -226,7 +226,14 @@
             </div>
         </div>
         <script type="text/javascript">
-            window.HOSTNAME_URL = "http://powerdistribution.journalai.io";
+            <?php
+                use PowerDistribution\Access\Database;
+                foreach(Database::$config as $config_key => $config_value) {
+                    ?>
+                    window.<?php echo $config_key; ?> = "<?php echo $config_value; ?>";
+                <?php 
+                }
+            ?>
         </script>
     </body>
 </html>

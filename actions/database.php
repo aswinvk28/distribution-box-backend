@@ -5,7 +5,8 @@ namespace PowerDistribution\Access;
 class Database 
 {
     private static $conn;
-    public $config;
+    public static $config;
+    private static $database;
     
     public function __construct()
     {
@@ -20,7 +21,7 @@ class Database
         
         static::$conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
-        static::$config = parse_ini_file(dirname(__FILE__) . '../site.ini');
+        static::$config = parse_ini_file(PAGE_ROOT . '/site.ini');
     }
 
     public function getConfig() 
@@ -31,5 +32,15 @@ class Database
     public static function getConnection()
     {
         return static::$conn;
+    }
+
+    public static function createInstance()
+    {
+        static::$database = new Database();
+    }
+
+    public static function getInstance()
+    {
+        return static::$database;
     }
 }

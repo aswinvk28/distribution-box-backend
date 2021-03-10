@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-$GLOBALS['debug'] = false;
+$GLOBALS['debug'] = true;
 $GLOBALS['email_to'] = "aswinkvj@gmail.com";
 $GLOBALS['error_path'] = "log/site.log";
 $GLOBALS["environment"] = "prod";

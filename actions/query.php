@@ -16,30 +16,23 @@ class Query {
         return $this->queryBuilder;
     }
 
-    public function selectAllFromCartesian()
+    public function selectAllFrom($table_name='templated')
     {
-        $this->queryBuilder = $this->queryBuilder->select('*')->from('cartesian');
+        $this->queryBuilder = $this->queryBuilder->select('*')->from($table_name);
         return $this->queryBuilder->execute()->fetchAll();
     }
 
-    public function selectAllFromTemplatedInputs($rowName = '')
+    public function selectAllFromTemplated($rowName = '')
     {
-        $this->queryBuilder = $this->queryBuilder->select('*')->from('templated_inputs')
+        $this->queryBuilder = $this->queryBuilder->select('*')->from('templated', 'ti')
         ->where("ti.row_name = '{$rowName}'");
         return $this->queryBuilder->execute()->fetchAll();
     }
 
-    public function selectAllFromTemplatedOutputs($rowName = '')
+    public function selectAllFromCartesian($rowName = '')
     {
-        $this->queryBuilder = $this->queryBuilder->select('*')->from('templated_outputs')
-        ->where("to.row_name = '{$rowName}'");
-        return $this->queryBuilder->execute()->fetchAll();
-    }
-
-    public function selectAllFromTemplatedAddons($rowName = '')
-    {
-        $this->queryBuilder = $this->queryBuilder->select('*')->from('templated_addons', ta)
-        ->where("ta.row_name = '{$rowName}'");
+        $this->queryBuilder = $this->queryBuilder->select('*')->from('cartesian', 'ca')
+        ->where("ca.row_name = '{$rowName}'");
         return $this->queryBuilder->execute()->fetchAll();
     }
 

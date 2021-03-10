@@ -2,13 +2,16 @@
 
 define('PAGE_ROOT', dirname(__FILE__));
 
-require_once 'config.php';
-require_once 'actions/errors.php';
-require_once 'includes/page.php';
+require_once 'vendor/autoload.php';
 require_once 'includes/routes.php';
 
 global $routes;
 session_start();
+
+require_once 'config.php';
+require_once 'actions/errors.php';
+require_once 'includes/page.php';
+
 $context = get_page_context();
 if($GLOBALS['debug']) {
     $params = (array) $context;

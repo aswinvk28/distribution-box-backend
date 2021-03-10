@@ -1,6 +1,7 @@
 {
     "name": "root/project",
     "license": "MIT",
+    "description": "A sample project",
     "authors": [
         {
             "name": "Aswin Vijayakumar",
@@ -13,8 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PowerDistribution\\Access\\Command": "actions/command.php", 
-            "PowerDistribution\\Access\\Query": "actions/query.php"
+            "PowerDistribution\\Access\\": "actions"
         }
     }
 }

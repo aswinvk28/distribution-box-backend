@@ -13,7 +13,7 @@ $routes = array(
             'page' => array('content' => array(), 'section_name' => '')
         )
     ),
-    '/distros/save' => array(
+    'distros/save-diagram' => array(
         'callable' => 'page_post_distros_save',
         'variables' => array(
             'page' => array('content' => array(), 'sidebar' => array(), 'message' => '')
