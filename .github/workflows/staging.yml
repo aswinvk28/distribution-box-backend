@@ -21,10 +21,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: FTP Deploy to build your box
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: 134.209.85.146
-          username: javawebmaster
-          password: ${{ secrets.STAGING_FTP_PASSWORD }}
+      - run: ./build_server.sh
