@@ -14,17 +14,18 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  web-deploy:
+    name: Deploy
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
-      - name: FTP Deploy to build your box
+      - name: Get latest code
+        uses: actions/checkout@v2
+      
+      - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: 134.209.85.146
