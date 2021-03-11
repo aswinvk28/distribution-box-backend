@@ -22,8 +22,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
       - name: FTP Deploy to build your box
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
