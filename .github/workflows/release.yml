@@ -22,13 +22,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: main
-        
+          fetch-depth: 2
+    
       - name: Install LFTP
         run: sudo apt-get install lftp -y
       
       - name: Permissions
         env:
           STAGING_FTP_PASSWORD: ${{ secrets.STAGING_FTP_PASSWORD }}
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        run: ./build_server.sh
+        run: chmod +x ./build_server.sh && ./build_server.sh
