@@ -31,7 +31,7 @@ if [ "$file_mode" == 'A' ] || [ "$file_mode" == 'M' ]; then
     echo "$directory_name"
 
     if [ -d "${directory_name}" ]; then
-        lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; mkdir /buildyourbox/$directory_name"
+        lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; cd /buildyourbox; mkdir $directory_name"
     fi
     if [ -f "${file_path}" ]; then
         lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; cd /buildyourbox/$directory_name; put $file_path"
