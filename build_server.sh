@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMMITS=`git log -6 --format='%H'`
+COMMITS=`git log -2 --format='%H'`
 i=0
 commit_1=''
 commit_2=''

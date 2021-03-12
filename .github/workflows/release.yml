@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 6
+          fetch-depth: 2
     
       - name: Install LFTP
         run: sudo apt-get install lftp -y
