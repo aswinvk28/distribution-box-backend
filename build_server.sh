@@ -41,10 +41,10 @@ elif [ "$file_mode" == 'D' ]; then
     file_name=`basename "$file_path"`
     echo "$directory_name"
 
-    if [ -d "${directory_name}" ]; then
-        lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; rmdir /buildyourbox/$directory_name"
-    else
+    if [ -f "${file_path}" ]; then
         lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; cd /buildyourbox/$directory_name; delete $file_path"
+    elif [ -d "${file_path}" ]
+        lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; rmdir /buildyourbox/$directory_name"
     fi
 fi
 done < <(echo "$LIST")
