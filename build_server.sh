@@ -43,7 +43,7 @@ elif [ "$file_mode" == 'D' ]; then
 
     if [ -f "${file_path}" ]; then
         lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; cd /buildyourbox/$directory_name; delete $file_path"
-    elif [ -d "${file_path}" ]
+    elif [ -d "${file_path}" ]; then
         lftp -c "open -u javawebmaster,$STAGING_FTP_PASSWORD 134.209.85.146; set ssl:verify-certificate no; rmdir /buildyourbox/$directory_name"
     fi
 fi
