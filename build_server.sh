@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMMITS=`git log -2 --format='%H'`
+COMMITS=`git log -3 --format='%H'`
 i=0
 commit_1=''
 commit_2=''
@@ -17,7 +17,7 @@ done < <(echo "$COMMITS")
 
 echo "Commits considered: $commit_1 $commit_2"
 
-LIST=`git diff --name-status $commit_1..$commit_2`
+LIST=`git diff --name-status $commit_2..$commit_1`
 
 echo "$LIST"
 
