@@ -123,7 +123,7 @@
                             "static/js/" +
                             ({}[e] || e) +
                             "." +
-                            { 3: "85276985" }[e] +
+                            { 3: "37208937" }[e] +
                             ".chunk.js"
                           );
                         })(e));
@@ -216,8 +216,8 @@
                 t();
               })([]);
             </script>
-            <script src="/build/static/js/2.1f7ce934.chunk.js"></script>
-            <script src="/build/static/js/main.28c3b687.chunk.js"></script>
+            <script src="/build/static/js/2.ab681d5e.chunk.js"></script>
+            <script src="/build/static/js/main.ee87deb6.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
