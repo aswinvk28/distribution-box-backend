@@ -217,7 +217,7 @@
               })([]);
             </script>
             <script src="/build/static/js/2.ab681d5e.chunk.js"></script>
-            <script src="/build/static/js/main.ee87deb6.chunk.js"></script>
+            <script src="/build/static/js/main.b5f5fda6.chunk.js"></script>
 
             <div id="page_footer">
                 <div class="container">
